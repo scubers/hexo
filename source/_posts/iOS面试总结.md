@@ -1,20 +1,11 @@
 ---
-
-title: iOS面试总结
-
+title: iOS面试整理
 date: 2018-05-24 18:44:52
-
-tags:
-
-categories: \[技术,面试,杂谈]
-
+tags: [杂谈, 技术]
+category: 杂谈
 toc: true
-
 mathjax: true
-
 ---
-
-
 
 
 
