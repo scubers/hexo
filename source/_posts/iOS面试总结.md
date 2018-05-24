@@ -9,9 +9,9 @@ mathjax: true
 
 ---
 
-## 面试知识点整理
+# 面试知识点整理
 
-### 1. 强连通分量（向量图相关）
+## 1. 强连通分量（向量图相关）
 
 涉及Tarjan算法，Kosaraju算法。
 
@@ -27,7 +27,7 @@ mathjax: true
 
 ---
 
-#### 2. TableView卡顿优化
+## 2. TableView卡顿优化
 
 1. Cell重用机制
 
@@ -47,13 +47,13 @@ mathjax: true
 
 ---
 
-#### 3. M、V、C相互通信规则
+## 3. M、V、C相互通信规则
 
 Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSource）。View 响应操作通知 Controller 更新Model （Delegate）
 
 ---
 
-#### 4. NSTimer 准吗？如何实现一个精准的Timer？
+## 4. NSTimer 准吗？如何实现一个精准的Timer？
 
 不准。
 
@@ -73,7 +73,7 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
 
 ---
 
-#### 5. 编译过程做了什么事情？
+## 5. 编译过程做了什么事情？
 
 复习编译过程！！！
 
@@ -97,7 +97,7 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
 
 ---
 
-#### 6. 字典的大致实现原理
+## 6. 字典的大致实现原理
 
 字典底层使用的是哈希表实现的一个key-value的一个映射关系。
 
@@ -111,7 +111,7 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
 
 ---
 
-#### 7. Block 和函数指针的理解
+## 7. Block 和函数指针的理解
 
 相同点：都是可以看做是一个代码片段，可以实现方法调用，预定义操作。
 
@@ -123,7 +123,7 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
 
 ---
 
-#### 8. 一般一开始做一个项目，你的架构是如何思考的？
+## 8. 一般一开始做一个项目，你的架构是如何思考的？
 
 [参考文章](https://casatwy.com/iosying-yong-jia-gou-tan-viewceng-de-zu-zhi-he-diao-yong-fang-an.html)
 
@@ -183,7 +183,7 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
 
 ---
 
-#### 9. OC的锁相关问题
+## 9. OC的锁相关问题
 
 1、你了解的锁有那些（自旋锁，互斥锁），使用的注意点，如果自己实现，如何实现？
 
