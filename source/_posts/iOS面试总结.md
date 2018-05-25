@@ -275,14 +275,15 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
    
    func _shortestFrom(start: Cell, end: Cell) {
      stack.append(start) // 把当前节点推入栈
+     start.visited = true
      for n in start.nearbys { // 遍历当前节点的所有相邻节点
        if n == end { // 如果相邻节点就是目标节点，则打印出路径数目
          print(stack.count) 
-       } else if stack.index(where: {$0 == n}) == nil { // 如果当前栈并没有存在当前节点n，则代表该节点未被访问过，可以递归执行
+       } else if !n.visited { // 如果当前节点未被访问过，可以递归执行
          _shortestFrom(start: n, end: end)
        }
      }
-     stack.removeLast()
+     stack.removeLast().visited = false
    }
    ```
 
