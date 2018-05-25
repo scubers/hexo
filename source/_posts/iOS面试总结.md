@@ -185,7 +185,7 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
 
 ## 9. OC的锁相关问题
 
-##### 1、你了解的锁有那些（自旋锁，互斥锁），使用的注意点，如果自己实现，如何实现？
+###### 1、你了解的锁有那些（自旋锁，互斥锁），使用的注意点，如果自己实现，如何实现？
 
 - OSSpinLock：不再安全。主要原因发生在低优先级线程拿到锁时，高优先级线程进入忙等(busy-wait)状态，消耗大量 CPU 时间，从而导致低优先级线程拿不到 CPU 时间，也就无法完成任务并释放锁。这种问题被称为优先级反转。
 
@@ -245,3 +245,45 @@ Controller 通知 Model 更新。View 从 Controller 获取数据展示（DataSo
 - 常用框架内存泄露，如何处理？
 
 ##### 3、容错处理一般怎么做？如何防止拦截潜在的崩溃？
+
+---
+
+## 10. 什么是拓扑排序，算法，拓扑有什么应用？
+
+###### 1. 定义
+
+对一个有向无环图(Directed Acyclic Graph简称DAG)G进行**拓扑排序**，**是**将G中所有顶点排成一个线性序列，使得图中任意一对顶点u和v，若边(u,v)∈E(G)，则u在线性序列中出现在v之前。 通常，这样的线性序列称为满足**拓扑**次序(Topological Order)的序列，简称**拓扑**序列。
+
+###### 2. 排序算法
+
+1. Kahn算法
+
+2. BFS算法（广度优先）
+
+3. DFS算法（深度优先算法）：时间复杂度较低。
+
+###### 3. 拓扑应用
+
+1. 一般拓扑应用与 程序的 Jobs、Tasks的规划，典型的可以以Jenkins的构建任务规划，以及检测有无循环依赖的任务等。
+
+2. 寻找迷宫的最优解。
+
+   ```swift
+   // 1.首先构造迷宫的拓扑结构
+   
+   var stack = [Cell]() // 创建一个保存路径的栈
+   
+   func _shortestFrom(start: Cell, end: Cell) {
+     stack.append(start) // 把当前节点推入栈
+     for n in start.nearbys { // 遍历当前节点的所有相邻节点
+       if n == end { // 如果相邻节点就是目标节点，则打印出路径数目
+         print(stack.count) 
+       } else if stack.index(where: {$0 == n}) == nil { // 如果当前栈并没有存在当前节点n，则代表该节点未被访问过，可以递归执行
+         _shortestFrom(start: n, end: end)
+       }
+     }
+     stack.removeLast()
+   }
+   ```
+
+   
