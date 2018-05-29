@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git pull
-hexo s
+hexo g
 nohup http-server -p 7081 &
