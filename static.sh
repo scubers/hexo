@@ -8,5 +8,6 @@ if [[ ${#pid} != 0 ]];then
 fi
 
 git pull
+npm install
 hexo g
 nohup http-server -p $port &
