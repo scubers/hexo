@@ -563,10 +563,10 @@ pace: true
 pace_theme: pace-theme-bounce
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
-three_waves: false
+three_waves: true
 
 # canvas_lines
 canvas_lines: false
